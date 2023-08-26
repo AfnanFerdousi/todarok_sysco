@@ -1,16 +1,8 @@
-import React from 'react';
-import Sidebar from './Sidebar'; 
+import React from "react";
+import Sidebar from "./Sidebar";
 
-const MainLayout = ({children}) => {
-    return (
-        <div className="flex">
-            {/* Sidebar */}
-            <Sidebar />
-            <div className="flex-1">
-              {children}
-            </div>
-        </div>
-    );
+const MainLayout = ({ children }) => {
+    return <div className="h-screen">{children}</div>;
 };
 
 export default MainLayout;
