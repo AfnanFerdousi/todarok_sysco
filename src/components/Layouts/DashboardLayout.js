@@ -1,11 +1,15 @@
-import React from "react";
-import Sidebar from "./Sidebar";
+import React from 'react';
+import Sidebar from './Sidebar';
 
-export default function DashboardLayout({ children }) {
+const DashboardLayout = ({children}) => {
     return (
-        <div className="flex">
+        <div className='flex'>
             <Sidebar />
-            <div className="">{children}</div>
+            <div>
+                {children}
+            </div>
         </div>
     );
-}
+};
+
+export default DashboardLayout;

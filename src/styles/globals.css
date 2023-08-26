@@ -6,4 +6,9 @@
 body {
     font-family: "Poppins", sans-serif;
 }
-
+a{
+    padding: 0px !important;
+}
+Link{
+    padding: 0px;
+}
