@@ -15,6 +15,10 @@ module.exports = {
             colors: {
                 primary: "#0046FF",
             },
+            fontFamily: {
+                poppins: ["Poppins", "sans-serif"],
+                montserrat: ["Montserrat", "sans-serif"],
+            }
         },
     },
     plugins: [require("daisyui")],
