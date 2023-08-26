@@ -6,6 +6,7 @@ import { BsPlusSquareFill, BsFillHddStackFill } from 'react-icons/bs';
 import { HiDocumentReport } from 'react-icons/hi';
 import { IoMdSettings } from 'react-icons/io';
 import { RiBillLine } from 'react-icons/ri';
+import logo from '../../../public/logo.svg';
 const Sidebar = () => {
     const menu = [
         {
@@ -60,17 +61,20 @@ const Sidebar = () => {
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <div className="menu ps-[65px] pt-[100px] max-w-[435px] w-[25vw] min-h-full bg-[#0046FF] text-base-content">
-                        <Image src="logo.svg" alt="image" maxWidth={221} width={180} height={61}>                            
+                        <Image src={logo} alt="image" maxWidth={221} width={180} height={61}>                            
                         </Image>
                         <ul className='lg:md:mt-16'>
                             {menu.map((item, index) => {
                                 const IconComponent = iconMap[item.icon]; 
                                 return (
                                     <li className='text-[#fff] font-semibold text-2xl max-pb-[27px] pb-4' key={index}>
-                                        <Link href={`/${item.name}`}>
+                                        {item.name === "Dashboard" ? <Link href={`/${item.name.toLowerCase()}`}>
                                             {IconComponent && <IconComponent />} {/* Render the icon */}
                                             <span>{item.name}</span>
-                                        </Link>
+                                        </Link> : <Link href={`/dashboard/${item.name.toLowerCase().split(' ').join('_')}`}>
+                                            {IconComponent && <IconComponent />} {/* Render the icon */}
+                                            <span>{item.name}</span>
+                                        </Link>}
                                     </li>
                                 );
                             })}
