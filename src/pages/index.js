@@ -1,15 +1,15 @@
-import Head from 'next/head';
-import React, { useState } from 'react';
-import 'react-phone-number-input/style.css';
-import PhoneInput from 'react-phone-number-input';
-import flags from 'react-phone-number-input/flags';
-import Button from '@/components/Button';
-import Image from 'next/image';
-import Link from 'next/link';
+import Head from "next/head";
+import React, { useState } from "react";
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
+import flags from "react-phone-number-input/flags";
+import Button from "@/components/Button";
+import Image from "next/image";
+import Link from "next/link";
 
 const Home = () => {
     const [value, setValue] = useState();
-    const [country, setCountry] = useState('BD'); // Initial country
+    const [country, setCountry] = useState("BD"); // Initial country
 
     const handleCountryChange = (newCountry) => {
         setCountry(newCountry);
@@ -21,10 +21,14 @@ const Home = () => {
                 <title>Home</title>
             </Head>
 
-            <div className='flex lg:md:justify-around items-center h-screen lg:md:px-0 px-4'>
+            <div className="flex lg:md:justify-around items-center h-screen lg:md:px-0 px-4">
                 <div>
-                    <h3 className='lg:md:text-3xl text-2xl font-medium text-[#000]'>Control your</h3>
-                    <h1 className='lg:md:text-5xl text-4xl lg:md:font-bold font-semibold text-[#0046FF]'>Station at a place</h1>
+                    <h3 className="lg:md:text-3xl text-2xl font-medium text-[#000]">
+                        Control your
+                    </h3>
+                    <h1 className="lg:md:text-5xl text-4xl lg:md:font-bold font-semibold text-[#0046FF]">
+                        Station at a place
+                    </h1>
 
                     <div className="lg:md:mt-[52px] my-10 form-control mb-[18px] lg:md:w-[400px] w-[300px]">
                         <label className="input-group h-16 rounded-[17px]">
@@ -68,24 +72,22 @@ const Home = () => {
                         </label>
                     </div>
                     <div className="flex items-center">
-                        <Button type="primary" width={'245px'} swidth={'200px'}>
+                        <Button type="primary" width={"245px"} swidth={"200px"}>
                             Register
                         </Button>
                         <p className="lg:md:text-[18px] text-[16px] ml-[18px] lg:md:font-medium w-[150px]">
                             Already have an account?{" "}
-                            <Link href="/login" className="text-[#0046FF] underline lg:md:font-bold font-semibold">Login</Link>
+                            <Link
+                                href="/login"
+                                className="text-[#0046FF] underline lg:md:font-bold font-semibold"
+                            >
+                                Login
+                            </Link>
                         </p>
                     </div>
                 </div>
-                <div className='lg:md:block hidden'>
-                    <Image
-                        src="bro.svg"
-                        alt="image"
-                        width={825}
-                        height={427}
-                    >
-
-                    </Image>
+                <div className="lg:md:block hidden">
+                    <Image src="bro.svg" alt="image" width={825} height={427} />
                 </div>
             </div>
         </div>
